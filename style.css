@@ -37,3 +37,12 @@ body {
 .salon-container:hover .store-image {
   opacity: 0;
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+/* Optional: Hide scrollbar for all browsers */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
