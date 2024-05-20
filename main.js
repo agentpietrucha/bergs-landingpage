@@ -1,24 +1,12 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
-
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
-
-setupCounter(document.querySelector('#counter'))
+window.onload = function () {
+  const heroSrc = document.getElementById('hero-src');
+  const heroVideo = document.getElementById('hero-video');
+  if (window.innerWidth > 768) {
+    heroSrc.src = 'BERGS_poziom.mp4';
+  } else {
+    heroSrc.src = 'BERGSpion.mp4';
+  }
+  document.getElementById('video-placeholder').classList.add('hidden');
+  heroVideo.classList.remove('hidden');
+  heroVideo.load();
+};

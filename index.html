@@ -11,27 +11,32 @@
       rel="stylesheet"
     />
     <link href="style.css" rel="stylesheet" />
+    <script src="main.js"></script>
   </head>
   <body class="bg-gray-100">
     <!-- Hero Section -->
-    <header class="relative text-white rounded-b-2xl">
+    <header class="relative text-white">
+      <picture id="video-placeholder">
+        <source
+          media="(max-width: 768px)"
+          srcset="video-placeholder-mobile.webp"
+        />
+        <img
+          src="video-placeholder.webp"
+          loading="eager"
+          class="w-full h-auto"
+        />
+      </picture>
       <video
-        src="BERGS_poziom.mp4"
-        autoplay
-        muted
-        loop
-        class="hidden md:block w-full h-auto"
-      >
-        Your browser does not support the video tag.
-      </video>
-      <video
-        src="BERGSpion.mp4"
         playsinline
         autoplay
         muted
         loop
-        class="block md:hidden w-full h-auto"
-      ></video>
+        class="w-full h-auto hidden"
+        id="hero-video"
+      >
+        <source id="hero-src" type="video/mp4" />
+      </video>
       <div class="absolute left-0 right-0 top-8 md:h-20">
         <div class="h-auto w-64 px-12 mx-auto">
           <img src="bergs_logo.webp" alt="Logo" class="mx-auto h-full w-full" />
