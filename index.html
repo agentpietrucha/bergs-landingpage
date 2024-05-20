@@ -15,11 +15,24 @@
   <body class="bg-gray-100">
     <!-- Hero Section -->
     <header class="relative text-white rounded-b-2xl">
-      <video src="BERGS_poziom.mp4" autoplay muted loop class="w-full h-auto">
+      <video
+        src="BERGS_poziom.mp4"
+        autoplay
+        muted
+        loop
+        class="hidden md:block w-full h-auto"
+      >
         Your browser does not support the video tag.
       </video>
-      <div class="absolute left-0 right-0 top-0 h-20">
-        <div class="h-full w-fit px-12 bg-white mx-auto rounded-b-2xl">
+      <video
+        src="BERGSpion.mp4"
+        autoplay
+        muted
+        loop
+        class="block md:hidden w-full h-auto"
+      ></video>
+      <div class="absolute left-0 right-0 top-0 h-32 -mt-8 md:mt-0 md:h-20">
+        <div class="h-full w-fit px-12 md:bg-white mx-auto rounded-b-2xl">
           <img src="bergs_logo.png" alt="Logo" class="mx-auto h-full w-auto" />
         </div>
       </div>
