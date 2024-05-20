@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.dupa img {
+  height: 4rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.salon-marker {
+  transition: width 0.3s ease-out;
+}
+
+.salon-marker span {
+  transition: all 0.3s ease-out;
+}
+
+.salon-container:hover .salon-marker span {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.map-image,
+.store-image {
+  transition: opacity 0.3s ease-out;
+}
+
+.salon-container:hover .map-image {
+  opacity: 1;
+}
+
+.salon-container:hover .store-image {
+  opacity: 0;
+}
